@@ -42,10 +42,6 @@
   --green-dark: #0f5132;
 }
 
-body {
-  background-color: white;
-}
-
 /* loader */
 @keyframes spinner {
   to {

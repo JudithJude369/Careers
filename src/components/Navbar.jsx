@@ -20,24 +20,77 @@ const Navbar = () => {
   };
 
   return (
-    <main>
-      <section className="lg:hidden">
-        <Logo />
-        <div
-          className="bg-orange-400 text-cyan-50 max-w-[2rem] w-full grid place-content-center text-[2rem]"
-          onClick={handleToggleMenu}
-        >
-          <GiHamburgerMenu />
+    <main className="bg-gray-900  w-[100%]">
+      {/* mobile menu */}
+      <section className="lg:hidden ">
+        <div className="flex justify-between items-center p-4">
+          <Logo />
+          <GiHamburgerMenu
+            onClick={handleToggleMenu}
+            className="bg-blue-700 text-gray-100 max-w-[3.5rem] w-full grid place-content-center text-[3rem] cursor-pointer shadow-lg"
+          />
         </div>
         {toggleMenu && (
-          <div onClick={handleOpenMenu}>
-            <NavLink to="/">home</NavLink>
-            <NavLink to="about">about us</NavLink>
-            <NavLink to="jobs">jobs</NavLink>
-            <NavLink to="login">login</NavLink>
-            <NavLink to="register">sign up</NavLink>
+          <div
+            onClick={handleOpenMenu}
+            className="bg-gray-100 grid grid-cols-1 gap-1 capitalize p-8 items-center text-[1.3rem] text-gray-900 font-semibold shadow-lg"
+          >
+            <NavLink
+              to="/"
+              className="cursor-pointer hover:bg-blue-700 hover:text-gray-100 hover:rounded-sm hover:pl-2"
+            >
+              home
+            </NavLink>
+            <NavLink
+              to="about"
+              className="cursor-pointer hover:bg-blue-700 hover:text-gray-100 hover:rounded-sm hover:pl-2"
+            >
+              about us
+            </NavLink>
+            <NavLink
+              to="jobs"
+              className="cursor-pointer hover:bg-blue-700 hover:text-gray-100 hover:rounded-sm hover:pl-2"
+            >
+              jobs
+            </NavLink>
+            <NavLink
+              to="login"
+              className="cursor-pointer hover:bg-blue-700 hover:text-gray-100 hover:rounded-sm hover:pl-2"
+            >
+              login
+            </NavLink>
+            <NavLink
+              to="register"
+              className="cursor-pointer hover:bg-blue-700 hover:text-gray-100 hover:rounded-md hover:pl-2"
+            >
+              sign up
+            </NavLink>
           </div>
         )}
+      </section>
+      {/* desktop menu */}
+      <section className="hidden lg:flex text-gray-100  text-[1.3rem] capitalize py-8 px-12 justify-between items-center">
+        <Logo />
+        <div className=" flex gap-4 items-center">
+          <NavLink to="/" className="cursor-pointer hover:underline">
+            home
+          </NavLink>
+          <NavLink to="about" className="cursor-pointer hover:underline">
+            about us
+          </NavLink>
+          <NavLink to="jobs" className="cursor-pointer hover:underline">
+            jobs
+          </NavLink>
+        </div>
+        {/* Register and Login */}
+        <div className=" flex gap-4 items-center">
+          <NavLink to="login" className="cursor-pointer hover:underline">
+            login
+          </NavLink>
+          <NavLink to="register" className="cursor-pointer hover:underline">
+            sign up
+          </NavLink>
+        </div>
       </section>
     </main>
   );
