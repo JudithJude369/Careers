@@ -42,6 +42,10 @@
   --green-dark: #0f5132;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow: scroll;
+}
 /* loader */
 @keyframes spinner {
   to {
@@ -58,4 +62,12 @@
   border-top-color: var(--primary-500);
   animation: spinner 0.6s linear infinite;
   /* margin: 0 auto; */
+}
+
+.align-items {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 4rem;
 }

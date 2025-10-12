@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import Logo from "./Logo";
+import { Logo } from "@/components";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 
@@ -22,8 +22,8 @@ const Navbar = () => {
   return (
     <main className="bg-gray-900  w-[100%]">
       {/* mobile menu */}
-      <section className="lg:hidden ">
-        <div className="flex justify-between items-center p-4">
+      <section className="lg:hidden relative">
+        <div className="flex justify-between items-center p-8 ">
           <Logo />
           <GiHamburgerMenu
             onClick={handleToggleMenu}
@@ -33,7 +33,7 @@ const Navbar = () => {
         {toggleMenu && (
           <div
             onClick={handleOpenMenu}
-            className="bg-gray-100 grid grid-cols-1 gap-1 capitalize p-8 items-center text-[1.3rem] text-gray-900 font-semibold shadow-lg"
+            className="bg-gray-100 grid grid-cols-1 gap-1 capitalize p-8 items-center text-[1.3rem] text-gray-900 font-semibold shadow-2xl absolute top-[6rem] w-full z-50 transition-all"
           >
             <NavLink
               to="/"
@@ -69,7 +69,7 @@ const Navbar = () => {
         )}
       </section>
       {/* desktop menu */}
-      <section className="hidden lg:flex text-gray-100  text-[1.3rem] capitalize py-8 px-12 justify-between items-center">
+      <section className="hidden lg:flex text-gray-100  text-[1.3rem] capitalize  justify-between items-center  max-w-7xl py-8 mx-auto px-4">
         <Logo />
         <div className=" flex gap-4 items-center">
           <NavLink to="/" className="cursor-pointer hover:underline">
