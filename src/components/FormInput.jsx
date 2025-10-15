@@ -1,11 +1,20 @@
 import { useInputStore } from "@/store/inputStore";
+import { useNavigate } from "react-router-dom";
 
 const FormInput = () => {
+  const navigate = useNavigate();
+
   const inputValue = useInputStore((state) => state.inputValue);
   const setInputValue = useInputStore((state) => state.setInputValue);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // <-- if input is empty or only spaces, do nothing
+
+    if (!inputValue.trim()) return;
+    // navigate to the /jobs page and add the search term as a query parameter
+    navigate(`/jobs?search=${encodeURIComponent(inputValue)}`);
   };
 
   const handleChange = (e) => {
@@ -15,7 +24,7 @@ const FormInput = () => {
     <div>
       <form
         action=""
-        className="max-w-[500px] lg:max-w-[800px] mx-auto  m-12"
+        className="max-w-[500px] lg:max-w-[800px] mx-auto mt-12"
         onSubmit={handleSubmit}
       >
         <input

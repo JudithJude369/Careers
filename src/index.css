@@ -75,8 +75,3 @@ html {
   width: 100%;
   padding: 1rem 4rem;
 }
-
-/* Add to your index.css or global.css */
-.slick-list {
-  overflow: visible !important;
-}

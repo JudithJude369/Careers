@@ -1,6 +1,4 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { motion } from "framer-motion";
 
 const logos = [
   "/assets/accenture_logo.png",
@@ -16,45 +14,30 @@ const logos = [
 ];
 
 const LogoCarousel = () => {
-  const settings = {
-    infinite: true,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 0,
-    speed: 9000,
-    cssEase: "linear",
-    arrows: false,
-    pauseOnHover: false,
-    swipe: false,
-    draggable: false,
-    responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 5 } },
-      { breakpoint: 768, settings: { slidesToShow: 4 } },
-      { breakpoint: 480, settings: { slidesToShow: 3 } },
-    ],
-  };
-
   return (
-    <div className="relative  w-full py-8 bg-gray-900">
-      <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 opacity-95 z-0"></div>
-      <div className="relative z-10 px-6">
-        <Slider {...settings}>
-          {logos.concat(logos).map((logo, i) => (
-            <div key={i} className="flex items-center justify-center px-4">
-              <div className="bg-white/95 rounded-lg shadow-md border border-gray-200 p-2 flex items-center justify-center">
-                <img
-                  src={logo}
-                  alt={`company-logo-${i}`}
-                  className="h-14 object-contain opacity-90 hover:opacity-100 transition-opacity"
-                  loading="lazy"
-                />
-              </div>
-            </div>
+    <section className="w-full  py-10 overflow-hidden">
+      <div className="flex space-x-12">
+        <motion.div
+          className="flex space-x-12"
+          animate={{ x: ["0%", "-100%"] }}
+          transition={{
+            repeat: Infinity,
+            repeatType: "loop",
+            duration: 20, // adjust for speed (smaller = faster)
+            ease: "linear",
+          }}
+        >
+          {[...logos, ...logos].map((logo, i) => (
+            <img
+              key={i}
+              src={logo}
+              alt={`logo-${i}`}
+              className="max-h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+            />
           ))}
-        </Slider>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 
