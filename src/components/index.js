@@ -4,3 +4,4 @@ export { default as FormInput } from "@/components/FormInput";
 export { default as Companies } from "@/components/Companies";
 export { default as LogoCarousel } from "@/components/LogoCarousel";
 export { default as Footer } from "@/components/Footer";
+export { default as RecentJobs } from "@/components/RecentJobs";

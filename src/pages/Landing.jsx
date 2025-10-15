@@ -13,10 +13,16 @@ const Landing = () => {
         <FormInput />
         <Companies />
       </section>
-      {/* <section className="align-items bg-amber-400">
-        <h4>recent jobs available</h4>
-        <p>Get your desired job from top companies</p>
-      </section> */}
+      <section className="align-items text-gray-900 bg-gray-100">
+        <div className="mt-8 text-center lg:text-left">
+          <h4 className="capitalize text-[1.5rem] font-semibold tracking-wide">
+            recent jobs available
+          </h4>
+          <p className="text-[1.2rem]">
+            Get your desired job from top companies
+          </p>
+        </div>
+      </section>
     </main>
   );
 };

@@ -46,9 +46,10 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  overflow: hidden;
   overflow: scroll;
 }
+
 /* loader */
 @keyframes spinner {
   to {
