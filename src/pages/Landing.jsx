@@ -1,4 +1,4 @@
-import { Companies, FormInput } from "@/components";
+import { Companies, FormInput, RecentJobs } from "@/components";
 
 const Landing = () => {
   return (
@@ -22,6 +22,7 @@ const Landing = () => {
             Get your desired job from top companies
           </p>
         </div>
+        <RecentJobs />
       </section>
     </main>
   );
