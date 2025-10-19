@@ -14,15 +14,10 @@ const Landing = () => {
         <Companies />
       </section>
       <section className="align-items text-gray-900 bg-gray-100">
-        <div className="mt-8 text-center lg:text-left">
-          <h4 className="capitalize text-[1.5rem] font-semibold tracking-wide">
-            recent jobs available
-          </h4>
-          <p className="text-[1.2rem]">
-            Get your desired job from top companies
-          </p>
-        </div>
         <RecentJobs />
+      </section>
+      <section className="align-items text-gray-900 bg-cyan-50">
+        create customers component and look at forage for inspiration
       </section>
     </main>
   );
