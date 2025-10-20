@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer className=" text-gray-900 text-center">
       <p>
-        Copyright @JudithJude.dev All right reserved | Job listings provided by
+        Copyright @JudithJude.dev All rights reserved | Job listings provided by
         <a
           href="https://remotive.com"
           target="_blank"
