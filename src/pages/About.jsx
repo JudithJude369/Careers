@@ -31,7 +31,7 @@ const About = () => {
       </section>
       {/* how it works */}
       <section className="align-items bg-gray-100 text-gray-900 py-[2.5rem] px-[4rem]">
-        <div className=" px-6 text-center">
+        <div className="  text-center">
           <h2 className=" text-[1.5rem] font-semibold my-8">How it works</h2>
           <p>
             Discover remote opportunities that match your skills — search,
@@ -39,7 +39,7 @@ const About = () => {
           </p>
         </div>
         {/* cards */}
-        <article className="flex flex-col lg:flex-row lg:items-stretch gap-4">
+        <article className="flex flex-col lg:flex-row lg:items-stretch gap-4 mt-4">
           {/* card1 */}
           <div className=" py-8 px-8 flex gap-2 text-center flex-col items-center max-w-[400px] mx-auto mt-8 lg:max-w-[800px] shadow-lg rounded-2xl">
             <SlUser className="bg-blue-700 text-6xl text-gray-100 p-2 rounded-xl shadow-2xl" />
