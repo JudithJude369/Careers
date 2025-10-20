@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
 
 const logos = [
-  "/assets/accenture_logo.png",
-  "/assets/adobe_logo.png",
-  "/assets/Amazon_logo.svg",
-  "/assets/Apple_logo.svg",
-  "/assets/google.png",
-  "/assets/IBM_logo.svg",
-  "/assets/Microsoft_logo.svg",
-  "/assets/Netflix_logo.svg",
-  "/assets/samsung_logo.png",
-  "/assets/YouTube.svg",
+  "/assets/companies/accenture_logo.png",
+  "/assets/companies/adobe_logo.png",
+  "/assets/companies/Amazon_logo.svg",
+  "/assets/companies/Apple_logo.svg",
+  "/assets/companies/google.png",
+  "/assets/companies/IBM_logo.svg",
+  "/assets/companies/Microsoft_logo.svg",
+  "/assets/companies/Netflix_logo.svg",
+  "/assets/companies/samsung_logo.png",
+  "/assets/companies/YouTube.svg",
 ];
 
 const LogoCarousel = () => {

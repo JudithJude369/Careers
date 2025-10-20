@@ -1,20 +1,16 @@
 const Footer = () => {
   return (
-    <footer>
+    <footer className=" text-gray-900 text-center">
       <p>
-        Copyright ©2025 All rights reserved | This template is made with by
-        Colorlib
-      </p>
-      <p>
-        Job listings provided by{" "}
+        Copyright @JudithJude.dev All right reserved | Job listings provided by
         <a
           href="https://remotive.com"
           target="_blank"
           rel="noopener noreferrer"
+          className=" cursor-pointer text-blue-700 hover:text-blue-500 font-semibold ml-2"
         >
           Remotive
         </a>
-        .
       </p>
     </footer>
   );

@@ -1,10 +1,10 @@
-import { Companies, FormInput, RecentJobs } from "@/components";
+import { Companies, Customers, FormInput, RecentJobs } from "@/components";
 
 const Landing = () => {
   return (
     <main>
       <section className="text-gray-100 bg-gray-900 align-items shadow-2xl text-center  ">
-        <h1 className="text-3xl font-[800] capitalize mt-20">
+        <h1 className="text-3xl font-[800] capitalize">
           Find your dream job today!
         </h1>
         <p className="capitalize text-xl text-gray-300 mt-4">
@@ -16,8 +16,11 @@ const Landing = () => {
       <section className="align-items text-gray-900 bg-gray-100">
         <RecentJobs />
       </section>
-      <section className="align-items text-gray-900 bg-cyan-50">
-        create customers component and look at forage for inspiration
+      <section className="align-items text-gray-900 bg-sky-50">
+        <h2 className="text-center text-[1.5rem] font-semibold my-8">
+          Too good to be true? Hear from our customers.
+        </h2>
+        <Customers />
       </section>
     </main>
   );

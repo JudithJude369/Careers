@@ -6,7 +6,9 @@ const HomeLayout = () => {
     <>
       <Navbar />
       <Outlet />
-      <Footer />
+      <section className="align-items bg-gray-100">
+        <Footer />
+      </section>
     </>
   );
 };
