@@ -20,10 +20,10 @@ const Navbar = () => {
   };
 
   return (
-    <main className="bg-gray-900  w-[100%]">
+    <main className=" bg-gray-900 backdrop-blur-md w-full fixed top-0 left-0 z-50 shadow-lg">
       {/* mobile menu */}
       <section className="lg:hidden relative">
-        <div className="flex justify-between items-center p-8 ">
+        <div className="flex justify-between items-center p-12">
           <Logo />
           <GiHamburgerMenu
             onClick={handleToggleMenu}
@@ -69,7 +69,7 @@ const Navbar = () => {
         )}
       </section>
       {/* desktop menu */}
-      <section className="hidden lg:flex text-gray-100  text-[1.3rem] capitalize  justify-between items-center  max-w-7xl py-8 mx-auto px-4">
+      <section className="hidden lg:flex text-gray-100  text-[1.3rem] capitalize  justify-between items-center  max-w-7xl py-8 mx-auto px-4 md:px-12">
         <Logo />
         <div className=" flex gap-4 items-center">
           <NavLink to="/" className="cursor-pointer hover:underline">

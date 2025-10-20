@@ -14,6 +14,7 @@ export const useInputStore = create(
       }),
       {
         name: "input-storage",
+        getStorage: () => sessionStorage, // 🟢 change to session storage
       }
     )
   )

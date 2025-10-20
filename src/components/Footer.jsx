@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className=" text-gray-900 text-center">
+    <footer className=" text-gray-900 text-center p-4">
       <p>
         Copyright @JudithJude.dev All rights reserved | Job listings provided by
         <a

@@ -1,11 +1,12 @@
 import { SlUser } from "react-icons/sl";
 import { IoBriefcaseOutline } from "react-icons/io5";
 import { GrStatusGood } from "react-icons/gr";
+import { Faq } from "@/components";
 
 const About = () => {
   return (
     <main>
-      <section className="text-gray-100 bg-gray-900 align-items shadow-2xl ">
+      <section className=" align-items text-gray-100 bg-gray-900  shadow-2xl pt-40 px-[4rem] pb-[2.5rem] ">
         {/* about-hero-section */}
         <div className="max-w-4xl mx-auto px-6">
           <h1 className="text-3xl font-[800] capitalize text-center ">
@@ -29,70 +30,75 @@ const About = () => {
         </div>
       </section>
       {/* how it works */}
-      <section className="align-items bg-gray-100 text-gray-900">
-        <h2>How it works</h2>
-        <p>
-          Discover remote opportunities that match your skills — search,
-          explore, and apply effortlessly with Careers.
-        </p>
-        <div>
-          <SlUser />
-          <h2>create account</h2>
+      <section className="align-items bg-gray-100 text-gray-900 py-[2.5rem] px-[4rem]">
+        <div className=" px-6 text-center">
+          <h2 className=" text-[1.5rem] font-semibold my-8">How it works</h2>
           <p>
-            Sign up to personalize your experience and save your favorite job
-            opportunities.
+            Discover remote opportunities that match your skills — search,
+            explore, and apply effortlessly with Careers.
           </p>
         </div>
-        <div>
-          <IoBriefcaseOutline />
-          <h2>find jobs</h2>
-          <p>
-            Explore verified remote positions from trusted companies across
-            various industries.
-          </p>
+        {/* cards */}
+        <article className="flex flex-col lg:flex-row lg:items-stretch gap-4">
+          {/* card1 */}
+          <div className=" py-8 px-8 flex gap-2 text-center flex-col items-center max-w-[400px] mx-auto mt-8 lg:max-w-[800px] shadow-lg rounded-2xl">
+            <SlUser className="bg-blue-700 text-6xl text-gray-100 p-2 rounded-xl shadow-2xl" />
+            <h2 className="text-[1.3rem] font-bold capitalize">
+              create account
+            </h2>
+            <p className="text-gray-700">
+              Sign up to personalize your experience and save your favorite job
+              opportunities.
+            </p>
+          </div>
+          {/* card2 */}
+          <div className=" py-8 px-8 flex gap-2 text-center flex-col items-center max-w-[400px] mx-auto mt-8 lg:max-w-[800px] shadow-lg rounded-2xl">
+            <IoBriefcaseOutline className="bg-blue-700 text-6xl text-gray-100 p-2 rounded-xl shadow-2xl" />
+            <h2 className="text-[1.3rem] font-bold capitalize">find jobs</h2>
+            <p className="text-gray-700">
+              Explore verified remote positions from trusted companies across
+              various industries.
+            </p>
+          </div>
+          {/* card3 */}
+          <div className=" py-8 px-8 flex gap-2 text-center flex-col items-center max-w-[400px] mx-auto mt-8 lg:max-w-[800px] shadow-lg rounded-2xl">
+            <GrStatusGood className="bg-blue-700 text-6xl text-gray-100 p-2 rounded-xl shadow-2xl" />
+            <h2 className="text-[1.3rem] font-bold capitalize">apply jobs</h2>
+            <p className="text-gray-700">
+              Choose the role that fits you best and apply directly through the
+              employer’s site.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      {/* video section */}
+      <section className="align-items bg-gray-100 text-gray-900 py-[2.5rem] px-[4rem]">
+        <div className=" rounded-lg shadow-lg mx-auto">
+          <video src="/assets/video/careers.mp4" controls className="w-full" />
+          <ul>
+            <li>
+              At Careers, we make finding your next remote job simple and
+              stress-free.
+            </li>
+            <li>
+              Explore verified opportunities from trusted companies and apply in
+              just a few clicks.
+            </li>
+            <li>
+              Build your career from anywhere — Careers connects you with the
+              right roles, fast.
+            </li>
+          </ul>
         </div>
-        <div>
-          <GrStatusGood />
-          <h2>apply jobs</h2>
-          <p>
-            Choose the role that fits you best and apply directly through the
-            employer’s site.
-          </p>
-        </div>
+      </section>
+
+      {/* FAQ section */}
+      <section className="align-items bg-gray-100 text-gray-900 py-[2.5rem] px-[4rem]">
+        <Faq />
       </section>
     </main>
   );
 };
 
 export default About;
-
-// About Page Structure
-
-// Intro section
-
-// Short paragraph about your platform — what it does (helps people find remote jobs, connects talent with opportunities, etc.).
-
-// Maybe a sentence about your mission or inspiration.
-
-// How it works
-
-// A simple 3-step outline like:
-
-// Search or filter for jobs
-
-// Explore listings and company details
-
-// Apply directly to your chosen role
-
-// Frequently Asked Questions (FAQ)
-// Example FAQs you could include:
-
-// “How often are new jobs added?”
-
-// “Are all jobs fully remote?”
-
-// “Do I need to create an account to apply?”
-
-// “Is this platform free to use?”
-
-// “Can I search by company or job title?”

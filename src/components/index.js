@@ -7,3 +7,4 @@ export { default as Footer } from "@/components/Footer";
 export { default as RecentJobs } from "@/components/RecentJobs";
 export { default as Loading } from "@/components/Loading";
 export { default as Customers } from "@/components/Customers";
+export { default as Faq } from "@/components/Faq";

@@ -44,7 +44,7 @@ const RecentJobs = () => {
   const jobsToDisplay = viewAll ? data.jobs : data.jobs.slice(0, 5);
   return (
     <div className="">
-      <div className="mb-12 text-center lg:text-left">
+      <div className="mb-12 text-center lg:text-justify">
         <h4 className="capitalize text-[1.5rem] font-semibold tracking-wide">
           recent jobs available
         </h4>
