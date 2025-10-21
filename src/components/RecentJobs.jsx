@@ -60,7 +60,7 @@ const RecentJobs = () => {
           </h2>
         </div>
       </div>
-      <section className="grid grid-cols-1 gap-2 ">
+      <section className="grid grid-cols-1 gap-2">
         {jobsToDisplay.map((newJobs) => {
           // adds how long timeAgo, jobs been posted
           const timeAgo = formatDistanceToNow(

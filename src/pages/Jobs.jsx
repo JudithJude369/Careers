@@ -1,5 +1,9 @@
 const Jobs = () => {
-  return <div>Jobs</div>;
+  return (
+    <div>
+      <p>jobsgdg</p>
+    </div>
+  );
 };
 
 export default Jobs;

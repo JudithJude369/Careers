@@ -2,6 +2,7 @@ import { SlUser } from "react-icons/sl";
 import { IoBriefcaseOutline } from "react-icons/io5";
 import { GrStatusGood } from "react-icons/gr";
 import { Faq } from "@/components";
+import { RiNumber1, RiNumber2, RiNumber3 } from "react-icons/ri";
 
 const About = () => {
   return (
@@ -41,7 +42,7 @@ const About = () => {
         {/* cards */}
         <article className="flex flex-col lg:flex-row lg:items-stretch gap-4 mt-4">
           {/* card1 */}
-          <div className=" py-8 px-8 flex gap-2 text-center flex-col items-center max-w-[400px] mx-auto mt-8 lg:max-w-[800px] shadow-lg rounded-2xl">
+          <div className="  p-8 flex gap-2 text-center flex-col items-center max-w-[400px] mx-auto mt-8 lg:max-w-[800px] shadow-lg rounded-2xl">
             <SlUser className="bg-blue-700 text-6xl text-gray-100 p-2 rounded-xl shadow-2xl" />
             <h2 className="text-[1.3rem] font-bold capitalize">
               create account
@@ -52,7 +53,7 @@ const About = () => {
             </p>
           </div>
           {/* card2 */}
-          <div className=" py-8 px-8 flex gap-2 text-center flex-col items-center max-w-[400px] mx-auto mt-8 lg:max-w-[800px] shadow-lg rounded-2xl">
+          <div className=" p-8 flex gap-2 text-center flex-col items-center max-w-[400px] mx-auto mt-8 lg:max-w-[800px] shadow-lg rounded-2xl">
             <IoBriefcaseOutline className="bg-blue-700 text-6xl text-gray-100 p-2 rounded-xl shadow-2xl" />
             <h2 className="text-[1.3rem] font-bold capitalize">find jobs</h2>
             <p className="text-gray-700">
@@ -61,7 +62,7 @@ const About = () => {
             </p>
           </div>
           {/* card3 */}
-          <div className=" py-8 px-8 flex gap-2 text-center flex-col items-center max-w-[400px] mx-auto mt-8 lg:max-w-[800px] shadow-lg rounded-2xl">
+          <div className=" p-8 flex gap-2 text-center flex-col items-center max-w-[400px] mx-auto mt-8 lg:max-w-[800px] shadow-lg rounded-2xl">
             <GrStatusGood className="bg-blue-700 text-6xl text-gray-100 p-2 rounded-xl shadow-2xl" />
             <h2 className="text-[1.3rem] font-bold capitalize">apply jobs</h2>
             <p className="text-gray-700">
@@ -74,22 +75,22 @@ const About = () => {
 
       {/* video section */}
       <section className="align-items bg-gray-100 text-gray-900 py-[2.5rem] px-[4rem]">
-        <div className=" rounded-lg shadow-lg mx-auto">
+        <div className=" rounded-lg overflow-hidden shadow-lg mx-auto lg:max-w-4xl max-w-6xl">
           <video src="/assets/video/careers.mp4" controls className="w-full" />
-          <ul>
-            <li>
+          <article className="p-8 bg-gray-900 text-gray-100 text-[1.2rem] flex flex-col lg:flex-row lg:items-stretch gap-4">
+            <p className="leading-tight ">
               At Careers, we make finding your next remote job simple and
               stress-free.
-            </li>
-            <li>
+            </p>
+            <p className="leading-tight">
               Explore verified opportunities from trusted companies and apply in
               just a few clicks.
-            </li>
-            <li>
+            </p>
+            <p className="leading-tight">
               Build your career from anywhere — Careers connects you with the
               right roles, fast.
-            </li>
-          </ul>
+            </p>
+          </article>
         </div>
       </section>
 

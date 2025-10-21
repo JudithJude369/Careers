@@ -43,20 +43,28 @@ const Faq = () => {
 
   return (
     <div>
-      <h2>frequently asked questions</h2>
-      <p>
+      <h2 className="text-[2rem] font-bold capitalize text-center mb-4">
+        frequently asked questions
+      </h2>
+      <p className="text-center mb-8">
         If you’ve got a question, there’s a good chance we’ve answered it below.
       </p>
-      <article>
+
+      <article className="lg:max-w-4xl mx-auto max-w-6xl ">
         {faqs.map((faq) => {
           const { id, question, answer } = faq;
           return (
-            <ul key={id}>
-              <div onClick={() => handleToggle(id)}>
-                <li>{question}</li>
+            <ul key={id} className="flex flex-col justify-center ">
+              <div
+                onClick={() => handleToggle(id)}
+                className="flex justify-between cursor-pointer items-center px-4 py-6  rounded-lg shadow-sm"
+              >
+                <li className="font-semibold">{question}</li>
                 <div>{activeId === id ? <FaMinus /> : <FaPlus />}</div>
               </div>
-              {activeId === id && <li>{answer}</li>}
+              <div className="flex  flex-col cursor-pointer  p-4 text-gray-600">
+                {activeId === id && <li>{answer}</li>}
+              </div>
             </ul>
           );
         })}
