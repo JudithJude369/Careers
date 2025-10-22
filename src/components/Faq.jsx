@@ -54,7 +54,7 @@ const Faq = () => {
         {faqs.map((faq) => {
           const { id, question, answer } = faq;
           return (
-            <ul key={id} className="flex flex-col justify-center ">
+            <ul key={id} className="flex flex-col justify-center w-full">
               <div
                 onClick={() => handleToggle(id)}
                 className="flex justify-between cursor-pointer items-center px-4 py-6  rounded-lg shadow-sm"

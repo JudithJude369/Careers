@@ -14,61 +14,49 @@ const url = `https://remotive.com/api/remote-jobs?limit=20`;
 const RecentJobs = () => {
   const [viewAll, setViewAll] = useState(false);
 
-  const handleClick = () => {
-    setViewAll((view) => {
-      return !view;
-    });
-  };
+  const handleClick = () => setViewAll((view) => !view);
 
   const { data, isPending, isError } = useQuery({
     queryKey: ["recentJobs"],
     queryFn: async () => {
       const result = await axios.get(url);
-
       return result.data;
     },
   });
-  // console.log(data);
 
-  if (isPending) {
-    return <Loading />;
-  }
-  if (isError) {
+  if (isPending) return <Loading />;
+  if (isError)
     return (
-      <section style={{ textAlign: "center", marginTop: "3rem" }}>
+      <section className="text-center mt-12">
         <h4>Failed to load jobs.</h4>
       </section>
     );
-  }
 
   const jobsToDisplay = viewAll ? data.jobs : data.jobs.slice(0, 5);
+
   return (
-    <div className="">
-      <div className="mb-12 text-center lg:text-justify">
-        <h4 className="capitalize text-[1.5rem] font-semibold tracking-wide">
-          recent jobs available
+    <div className="px-6 md:px-10 lg:px-20 py-10">
+      {/* Heading Section */}
+      <div className="mb-12 text-center lg:text-left">
+        <h4 className="text-2xl font-bold capitalize tracking-wide mb-2 text-gray-800">
+          Recent Jobs Available
         </h4>
-        <div className=" lg:flex lg:justify-between lg:items-center">
-          <p className="text-[1.2rem]">
+        <div className="lg:flex lg:justify-between lg:items-center">
+          <p className="text-gray-600 text-lg">
             Get your desired job from top companies
           </p>
           <h2
             onClick={handleClick}
-            className="  hover:text-blue-500 cursor-pointer text-2xl text-center font-semibold text-blue-700 underline m-4 hidden lg:flex"
+            className="hidden lg:block text-blue-700 text-lg font-semibold underline cursor-pointer hover:text-blue-500"
           >
-            {viewAll ? "View less" : "View all"}
+            {viewAll ? "View Less" : "View All"}
           </h2>
         </div>
       </div>
-      <section className="grid grid-cols-1 gap-2">
-        {jobsToDisplay.map((newJobs) => {
-          // adds how long timeAgo, jobs been posted
-          const timeAgo = formatDistanceToNow(
-            new Date(newJobs.publication_date),
-            {
-              addSuffix: true,
-            }
-          );
+
+      {/* Job Cards */}
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {jobsToDisplay.map((job) => {
           const {
             id,
             candidate_required_location: location,
@@ -78,63 +66,74 @@ const RecentJobs = () => {
             job_type: jobType,
             salary,
             company_logo,
-          } = newJobs;
+            publication_date,
+          } = job;
+
+          const timeAgo = formatDistanceToNow(new Date(publication_date), {
+            addSuffix: true,
+          });
+
           return (
             <div
               key={id}
-              className="px-8 py-4 grid grid-cols-1 text-[1rem] text-gray-700 rounded-3xl shadow-lg"
+              className="bg-white shadow-md rounded-2xl p-6 flex flex-col justify-between hover:shadow-xl transition duration-300"
             >
-              <p className="rounded-xl bg-gray-300 text-blue-700 p-1 max-w-[100px]  text-[0.8rem] text-center font-bold mb-7">
-                {timeAgo}
-              </p>
-              <div className="flex flex-col gap-4 lg:flex-row lg:items-center mb-4">
-                <img
-                  src={company_logo}
-                  alt={companyName}
-                  className="max-w-[50px]"
-                />
-                <div className=" leading-tight">
-                  <h2 className="text-[1.5rem] font-bold">{title}</h2>
-                  <p className="text-[1rem] tracking-wide">{companyName}</p>
+              <div>
+                <p className="text-sm text-blue-700 font-semibold bg-blue-100 inline-block px-3 py-1 rounded-full mb-4">
+                  {timeAgo}
+                </p>
+                <div className="flex items-center gap-3 mb-4">
+                  {company_logo && (
+                    <img
+                      src={company_logo}
+                      alt={companyName}
+                      className="w-10 h-10 object-contain"
+                    />
+                  )}
+                  <div>
+                    <h2 className="text-lg font-bold text-gray-800">{title}</h2>
+                    <p className="text-gray-600">{companyName}</p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 gap-2 text-sm text-gray-700 mb-4">
+                  <div className="flex items-center gap-2">
+                    <IoBriefcaseOutline className="text-blue-700" />
+                    <p>{category}</p>
+                  </div>
+                  <div className="flex items-center gap-2 capitalize">
+                    <MdAccessTime className="text-blue-700" />
+                    <p>{jobType}</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <HiOutlineBanknotes className="text-blue-700" />
+                    <p>{salary || "Not specified"}</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <RiMapPinLine className="text-blue-700" />
+                    <p>{location}</p>
+                  </div>
                 </div>
               </div>
-              <section className="grid grid-cols-1 gap-[0.5rem] lg:grid-cols-5 lg:items-center">
-                <div className="flex gap-2 items-center">
-                  <IoBriefcaseOutline className="text-2xl text-blue-700" />
-                  <p>{category}</p>
-                </div>
 
-                <div className="flex gap-2 items-center capitalize">
-                  <MdAccessTime className="text-2xl text-blue-700" />
-                  <p>{jobType}</p>
-                </div>
-                <div className="flex gap-2 items-center">
-                  <HiOutlineBanknotes className="text-2xl text-blue-700" />
-                  <p>{salary}</p>
-                </div>
-
-                <div className="flex gap-2 items-center">
-                  <RiMapPinLine className="text-2xl text-blue-700" />
-                  <p>{location}</p>
-                </div>
-
-                <Link to={`/jobs/${id}`} className="m-4">
-                  <button className=" font-medium capitalize text-gray-100 bg-blue-700 p-2 w-full rounded-xl shadow-2xl cursor-pointer hover:bg-blue-500 hover:font-bold">
-                    job details
-                  </button>
-                </Link>
-              </section>
+              {/* Job Details Button */}
+              <Link to={`/jobs/${id}`} state={job}>
+                <button className="w-full bg-blue-700 text-white py-2 rounded-lg font-medium hover:bg-blue-600 transition duration-200">
+                  View Job Details
+                </button>
+              </Link>
             </div>
           );
         })}
-
-        <h2
-          onClick={handleClick}
-          className="cursor-pointer text-2xl text-center font-semibold text-blue-700 underline m-4 lg:hidden  hover:text-blue-500"
-        >
-          {viewAll ? "View less" : "View all"}
-        </h2>
       </section>
+
+      {/* Mobile View All Button */}
+      <h2
+        onClick={handleClick}
+        className="lg:hidden text-blue-700 text-center mt-8 text-lg font-semibold underline cursor-pointer hover:text-blue-500"
+      >
+        {viewAll ? "View Less" : "View All"}
+      </h2>
     </div>
   );
 };

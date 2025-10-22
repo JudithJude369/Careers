@@ -2,7 +2,6 @@ import { SlUser } from "react-icons/sl";
 import { IoBriefcaseOutline } from "react-icons/io5";
 import { GrStatusGood } from "react-icons/gr";
 import { Faq } from "@/components";
-import { RiNumber1, RiNumber2, RiNumber3 } from "react-icons/ri";
 
 const About = () => {
   return (
