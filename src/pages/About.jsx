@@ -6,7 +6,7 @@ import { Faq } from "@/components";
 const About = () => {
   return (
     <main>
-      <section className=" align-items text-gray-100 bg-gray-900  shadow-2xl pt-40 px-[4rem] pb-[2.5rem] ">
+      <section className=" align-items text-gray-100 bg-gray-900  shadow-2xl pt-50 px-[4rem] pb-10 ">
         {/* about-hero-section */}
         <div className="max-w-4xl mx-auto px-6">
           <h1 className="text-3xl font-[800] capitalize text-center ">

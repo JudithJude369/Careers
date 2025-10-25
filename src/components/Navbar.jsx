@@ -54,16 +54,10 @@ const Navbar = () => {
               jobs
             </NavLink>
             <NavLink
-              to="login"
+              to="contact"
               className="cursor-pointer hover:bg-blue-700 hover:text-gray-100 hover:rounded-sm hover:pl-2"
             >
-              login
-            </NavLink>
-            <NavLink
-              to="register"
-              className="cursor-pointer hover:bg-blue-700 hover:text-gray-100 hover:rounded-md hover:pl-2"
-            >
-              sign up
+              contact us
             </NavLink>
           </div>
         )}
@@ -84,11 +78,8 @@ const Navbar = () => {
         </div>
         {/* Register and Login */}
         <div className=" flex gap-4 items-center">
-          <NavLink to="login" className="cursor-pointer hover:underline">
-            login
-          </NavLink>
-          <NavLink to="register" className="cursor-pointer hover:underline">
-            sign up
+          <NavLink to="contact" className="cursor-pointer hover:underline">
+            contact us
           </NavLink>
         </div>
       </section>

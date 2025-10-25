@@ -1,15 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import {
-  About,
-  Error,
-  HomeLayout,
-  Landing,
-  Job,
-  Jobs,
-  Login,
-  Register,
-} from "@/pages";
+import { About, Error, HomeLayout, Landing, Job, Jobs, Contact } from "@/pages";
 
 const router = createBrowserRouter([
   {
@@ -34,12 +25,8 @@ const router = createBrowserRouter([
         element: <Job />,
       },
       {
-        path: "login",
-        element: <Login />,
-      },
-      {
-        path: "register",
-        element: <Register />,
+        path: "contact",
+        element: <Contact />,
       },
     ],
   },

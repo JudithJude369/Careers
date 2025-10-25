@@ -55,7 +55,7 @@ const Jobs = () => {
   return (
     <main>
       {/* Header Section */}
-      <section className="bg-gray-900 text-white text-center py-16 shadow-lg">
+      <section className="bg-gray-900 text-white text-center pb-10 shadow-lg pt-50">
         <h1 className="text-3xl sm:text-4xl font-bold capitalize">Jobs</h1>
       </section>
 

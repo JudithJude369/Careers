@@ -64,7 +64,7 @@ const Job = () => {
   return (
     <main>
       {/* Header */}
-      <section className="text-gray-100 bg-gray-900 pt-20 pb-10 text-center">
+      <section className="text-gray-100 bg-gray-900 pt-50 pb-10 text-center">
         <h1 className="text-3xl font-bold capitalize">Job Details</h1>
       </section>
 

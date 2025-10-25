@@ -4,7 +4,7 @@ const Landing = () => {
   return (
     <main>
       {/* hero section */}
-      <section className="text-gray-100 bg-gray-900 shadow-2xl text-center pt-40 pb-[2.5rem] ">
+      <section className="text-gray-100 bg-gray-900 shadow-2xl text-center pt-50 pb-10 ">
         <div className="align-items px-[4rem] ">
           <h1 className="text-3xl font-[800] capitalize">
             Find your dream job today!
