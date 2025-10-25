@@ -34,8 +34,8 @@ It integrates with the [Remotive API](https://remotive.com/api/remote-jobs) to f
 ---
 
 ## 📸 Screenshots
+![careers-screenshot](https://github.com/user-attachments/assets/99f0e84b-f31c-47e5-8605-d6e645a8f2b7)
 
-> _(Add screenshots or GIFs of your app once deployed — Homepage, Job Listings, Job Details, Contact Page, etc.)_
 
 ---
 
