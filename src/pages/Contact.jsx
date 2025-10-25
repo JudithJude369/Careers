@@ -3,6 +3,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
 
 // ✅ Validation Schema
 const schema = yup.object({
@@ -159,14 +160,13 @@ const Contact = () => {
           <div>
             <h4 className="text-lg font-medium mb-2">Looking for jobs?</h4>
             <p className="text-gray-300">
-              Browse the latest remote job listings on our{" "}
-              <a
-                href="/jobs"
-                className="text-blue-400 hover:underline font-semibold"
+              Browse the latest remote job listings on our
+              <Link
+                className="text-blue-400 hover:underline font-semibold cursor-pointer ml-2"
+                to="/jobs"
               >
                 Jobs page
-              </a>
-              .
+              </Link>
             </p>
           </div>
         </div>
