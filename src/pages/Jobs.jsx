@@ -65,7 +65,7 @@ const Jobs = () => {
         <div className="flex justify-center mb-8">
           <button
             onClick={handleBackHome}
-            className="bg-gray-800 text-white px-5 py-2 rounded hover:bg-gray-700 transition"
+            className="bg-gray-800 text-white px-5 py-2 rounded hover:bg-gray-700 transition cursor-pointer"
           >
             Back to Home
           </button>
@@ -100,7 +100,7 @@ const Jobs = () => {
 
                 <button
                   onClick={() => handleViewDetails(job)}
-                  className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+                  className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition cursor-pointer"
                 >
                   View Details
                 </button>

@@ -118,7 +118,7 @@ const RecentJobs = () => {
 
               {/* Job Details Button */}
               <Link to={`/jobs/${id}`} state={job}>
-                <button className="w-full bg-blue-700 text-white py-2 rounded-lg font-medium hover:bg-blue-600 transition duration-200">
+                <button className="w-full bg-blue-700 text-white py-2 rounded-lg font-medium hover:bg-blue-600 transition duration-200 cursor-pointer">
                   View Job Details
                 </button>
               </Link>

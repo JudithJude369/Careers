@@ -27,27 +27,25 @@ const reviews = [
 
 const Customers = () => {
   return (
-    <div className="flex  flex-col lg:flex-row lg:items-stretch gap-[2rem]">
-      {reviews.map((story) => {
-        const { id, name, company, image, review } = story;
-        return (
-          <ul
-            key={id}
-            className="rounded-2xl overflow-hidden shadow-lg bg-gray-100"
-          >
-            <li>
-              <img src={image} alt={name} className="shadow-lg flex-grow" />
-            </li>
-            <div className="text-justify p-4">
-              <li>"{review}"</li>
-              <li className="text-blue-700 font-bold mt-4 text-[1.2rem]">
-                {name}
-              </li>
-              <li>Landed a job at {company}</li>
-            </div>
-          </ul>
-        );
-      })}
+    <div className="flex flex-col lg:flex-row lg:items-stretch gap-6">
+      {reviews.map(({ id, name, company, image, review }) => (
+        <ul
+          key={id}
+          className="rounded-2xl overflow-hidden shadow-lg bg-white flex flex-col hover:shadow-xl transition-all duration-300"
+        >
+          {/* Image container */}
+          <li className="w-full bg-gray-100 flex justify-center items-center">
+            <img src={image} alt={name} className="w-full object-contain" />
+          </li>
+
+          {/* Review content */}
+          <div className="p-6 flex flex-col flex-grow text-gray-700 text-justify">
+            <li className="italic text-gray-600">"{review}"</li>
+            <li className="text-blue-700 font-semibold mt-4 text-lg">{name}</li>
+            <li className="text-sm text-gray-500">Landed a job at {company}</li>
+          </div>
+        </ul>
+      ))}
     </div>
   );
 };

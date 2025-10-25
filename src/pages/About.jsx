@@ -6,64 +6,68 @@ import { Faq } from "@/components";
 const About = () => {
   return (
     <main>
-      <section className=" align-items text-gray-100 bg-gray-900  shadow-2xl pt-50 px-[4rem] pb-10 ">
-        {/* about-hero-section */}
-        <div className="max-w-4xl mx-auto px-6">
-          <h1 className="text-3xl font-[800] capitalize text-center ">
-            about us
+      {/* Hero Section */}
+      <section className="text-gray-100 bg-gray-900 shadow-2xl pt-50 pb-10 px-6 md:px-12 lg:px-20 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-3xl md:text-4xl font-extrabold capitalize">
+            About Us
           </h1>
-          <div className="text-justify text-gray-300 text-xl mt-4">
+          <div className="text-justify text-gray-300 text-lg md:text-xl mt-6 space-y-4">
             <p>
-              Welcome to Careers, a professional job application portal
-              dedicated to connecting talented individuals with exceptional
-              remote opportunities. Our platform features a wide range of
-              verified job listings from reputable companies across diverse
-              industries.
+              Welcome to{" "}
+              <span className="font-semibold text-blue-400">Careers</span>, a
+              professional job application portal dedicated to connecting
+              talented individuals with exceptional remote opportunities. Our
+              platform features verified job listings from reputable companies
+              across diverse industries.
             </p>
-            <p className="mt-4">
-              At Careers, we are committed to simplifying the job search process
-              by providing a seamless, user-friendly experience that helps job
-              seekers find roles that align with their skills, values, and
-              career goals.
+            <p>
+              At Careers, we simplify the job search process by providing a
+              seamless, user-friendly experience that helps job seekers find
+              roles aligned with their skills, values, and career goals.
             </p>
           </div>
         </div>
       </section>
-      {/* how it works */}
-      <section className="align-items bg-gray-100 text-gray-900 py-[2.5rem] px-[4rem]">
-        <div className="  text-center">
-          <h2 className=" text-[1.5rem] font-semibold my-8">How it works</h2>
-          <p>
+
+      {/* How It Works */}
+      <section className="bg-gray-100 text-gray-900 py-16 px-6 md:px-12 lg:px-20 text-center">
+        <div className="max-w-4xl mx-auto mb-10">
+          <h2 className="text-2xl font-bold mb-4">How It Works</h2>
+          <p className="text-gray-600">
             Discover remote opportunities that match your skills — search,
             explore, and apply effortlessly with Careers.
           </p>
         </div>
-        {/* cards */}
-        <article className="flex flex-col lg:flex-row lg:items-stretch gap-4 mt-4">
-          {/* card1 */}
-          <div className="  p-8 flex gap-2 text-center flex-col items-center max-w-[400px] mx-auto mt-8 lg:max-w-[800px] shadow-lg rounded-2xl">
-            <SlUser className="bg-blue-700 text-6xl text-gray-100 p-2 rounded-xl shadow-2xl" />
-            <h2 className="text-[1.3rem] font-bold capitalize">
-              create account
+
+        {/* Cards */}
+        <article className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Card 1 */}
+          <div className="p-8 bg-white rounded-2xl shadow-md flex flex-col items-center text-center hover:shadow-lg transition">
+            <SlUser className="bg-blue-700 text-5xl text-gray-100 p-3 rounded-xl mb-4" />
+            <h2 className="text-lg font-bold capitalize mb-2">
+              Create Account
             </h2>
             <p className="text-gray-700">
               Sign up to personalize your experience and save your favorite job
               opportunities.
             </p>
           </div>
-          {/* card2 */}
-          <div className=" p-8 flex gap-2 text-center flex-col items-center max-w-[400px] mx-auto mt-8 lg:max-w-[800px] shadow-lg rounded-2xl">
-            <IoBriefcaseOutline className="bg-blue-700 text-6xl text-gray-100 p-2 rounded-xl shadow-2xl" />
-            <h2 className="text-[1.3rem] font-bold capitalize">find jobs</h2>
+
+          {/* Card 2 */}
+          <div className="p-8 bg-white rounded-2xl shadow-md flex flex-col items-center text-center hover:shadow-lg transition">
+            <IoBriefcaseOutline className="bg-blue-700 text-5xl text-gray-100 p-3 rounded-xl mb-4" />
+            <h2 className="text-lg font-bold capitalize mb-2">Find Jobs</h2>
             <p className="text-gray-700">
               Explore verified remote positions from trusted companies across
               various industries.
             </p>
           </div>
-          {/* card3 */}
-          <div className=" p-8 flex gap-2 text-center flex-col items-center max-w-[400px] mx-auto mt-8 lg:max-w-[800px] shadow-lg rounded-2xl">
-            <GrStatusGood className="bg-blue-700 text-6xl text-gray-100 p-2 rounded-xl shadow-2xl" />
-            <h2 className="text-[1.3rem] font-bold capitalize">apply jobs</h2>
+
+          {/* Card 3 */}
+          <div className="p-8 bg-white rounded-2xl shadow-md flex flex-col items-center text-center hover:shadow-lg transition">
+            <GrStatusGood className="bg-blue-700 text-5xl text-gray-100 p-3 rounded-xl mb-4" />
+            <h2 className="text-lg font-bold capitalize mb-2">Apply Jobs</h2>
             <p className="text-gray-700">
               Choose the role that fits you best and apply directly through the
               employer’s site.
@@ -72,20 +76,24 @@ const About = () => {
         </article>
       </section>
 
-      {/* video section */}
-      <section className="align-items bg-gray-100 text-gray-900 py-[2.5rem] px-[4rem]">
-        <div className=" rounded-lg overflow-hidden shadow-lg mx-auto lg:max-w-4xl max-w-6xl">
-          <video src="/assets/video/careers.mp4" controls className="w-full" />
-          <article className="p-8 bg-gray-900 text-gray-100 text-[1.2rem] flex flex-col lg:flex-row lg:items-stretch gap-4">
-            <p className="leading-tight ">
+      {/* Video Section */}
+      <section className="bg-gray-100 text-gray-900 py-16 px-6 md:px-12 lg:px-20">
+        <div className="max-w-5xl mx-auto rounded-xl overflow-hidden shadow-lg">
+          <video
+            src="/assets/video/careers.mp4"
+            controls
+            className="w-full rounded-t-xl"
+          />
+          <article className="p-8 bg-gray-900 text-gray-100 text-base md:text-lg grid md:grid-cols-3 gap-6">
+            <p>
               At Careers, we make finding your next remote job simple and
               stress-free.
             </p>
-            <p className="leading-tight">
+            <p>
               Explore verified opportunities from trusted companies and apply in
               just a few clicks.
             </p>
-            <p className="leading-tight">
+            <p>
               Build your career from anywhere — Careers connects you with the
               right roles, fast.
             </p>
@@ -93,8 +101,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* FAQ section */}
-      <section className="align-items bg-gray-100 text-gray-900 py-[2.5rem] px-[4rem]">
+      {/* FAQ Section */}
+      <section className="bg-gray-100 text-gray-900 py-16 px-6 md:px-12 lg:px-20">
         <Faq />
       </section>
     </main>

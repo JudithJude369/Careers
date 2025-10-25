@@ -2,9 +2,9 @@ import { LogoCarousel } from ".";
 
 const Companies = () => {
   return (
-    <div>
-      <p className="text-xl text-gray-300 mt-8">
-        Featuring job simulations and jobs from leading companies
+    <div className="text-center">
+      <p className="text-gray-300 text-base md:text-lg mb-6">
+        Featuring job simulations and roles from top global companies
       </p>
       <LogoCarousel />
     </div>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
 export const faqs = [
   {
@@ -42,32 +43,47 @@ const Faq = () => {
   };
 
   return (
-    <div>
-      <h2 className="text-[2rem] font-bold capitalize text-center mb-4">
-        frequently asked questions
+    <div className="px-6 md:px-12 lg:px-20">
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 capitalize">
+        Frequently Asked Questions
       </h2>
-      <p className="text-center mb-8">
+      <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
         If you’ve got a question, there’s a good chance we’ve answered it below.
       </p>
 
-      <article className="lg:max-w-4xl mx-auto max-w-6xl ">
-        {faqs.map((faq) => {
-          const { id, question, answer } = faq;
-          return (
-            <ul key={id} className="flex flex-col justify-center w-full">
-              <div
-                onClick={() => handleToggle(id)}
-                className="flex justify-between cursor-pointer items-center px-4 py-6  rounded-lg shadow-sm"
-              >
-                <li className="font-semibold">{question}</li>
-                <div>{activeId === id ? <FaMinus /> : <FaPlus />}</div>
-              </div>
-              <div className="flex  flex-col cursor-pointer  p-4 text-gray-600">
-                {activeId === id && <li>{answer}</li>}
-              </div>
-            </ul>
-          );
-        })}
+      <article className="max-w-3xl mx-auto space-y-4">
+        {faqs.map(({ id, question, answer }) => (
+          <div
+            key={id}
+            className="bg-white shadow-md rounded-xl overflow-hidden transition hover:shadow-lg"
+          >
+            <button
+              onClick={() => handleToggle(id)}
+              className="w-full flex justify-between items-center px-5 py-4 text-left font-medium text-gray-800 focus:outline-none cursor-pointer"
+            >
+              {question}
+              <span className="text-blue-600">
+                {activeId === id ? <FaMinus /> : <FaPlus />}
+              </span>
+            </button>
+
+            {/* Animate open/close */}
+            <AnimatePresence initial={false}>
+              {activeId === id && (
+                <motion.div
+                  key="content"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="px-5 pb-4 text-gray-600 text-sm md:text-base"
+                >
+                  {answer}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        ))}
       </article>
     </div>
   );

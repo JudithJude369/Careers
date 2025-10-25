@@ -124,21 +124,21 @@ const Job = () => {
             href={currentJob.url}
             target="_blank"
             rel="noreferrer"
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-center"
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-center cursor-pointer"
           >
             Apply on Remotive
           </a>
 
           <button
             onClick={handleBackToJobs}
-            className="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800 transition"
+            className="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800 transition cursor-pointer"
           >
             Back to Jobs
           </button>
 
           <button
             onClick={handleBackHome}
-            className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transition"
+            className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transition cursor-pointer"
           >
             Back to Home
           </button>

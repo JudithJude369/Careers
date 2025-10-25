@@ -3,39 +3,34 @@ import { useNavigate } from "react-router-dom";
 
 const FormInput = () => {
   const navigate = useNavigate();
-
   const inputValue = useInputStore((state) => state.inputValue);
   const setInputValue = useInputStore((state) => state.setInputValue);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // <-- if input is empty or only spaces, do nothing
-
     if (!inputValue.trim()) return;
-    // navigate to the /jobs page and add the search term as a query parameter
     navigate(`/jobs?search=${encodeURIComponent(inputValue)}`);
   };
 
-  const handleChange = (e) => {
-    setInputValue(e.target.value);
-  };
   return (
-    <div>
-      <form
-        action=""
-        className="max-w-[500px] lg:max-w-[800px] mx-auto mt-12"
-        onSubmit={handleSubmit}
+    <form
+      onSubmit={handleSubmit}
+      className="flex flex-col sm:flex-row items-center gap-4 justify-center w-full max-w-2xl mx-auto"
+    >
+      <input
+        type="text"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+        placeholder="Search 2000+ Remote Jobs..."
+        className="rounded-lg shadow-lg bg-gray-100 px-4 py-3 w-full text-gray-900 focus:ring-2 focus:ring-blue-600 outline-none transition"
+      />
+      <button
+        type="submit"
+        className="bg-blue-700 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-lg shadow-md transition cursor-pointer"
       >
-        <input
-          type="text"
-          value={inputValue}
-          placeholder="Search 2000 Remote Jobs..."
-          className="rounded-lg shadow-lg bg-gray-100 px-4 py-2 w-[100%] cursor-pointer text-gray-900"
-          onChange={handleChange}
-        />
-      </form>
-    </div>
+        Search
+      </button>
+    </form>
   );
 };
 
