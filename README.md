@@ -39,7 +39,7 @@ It integrates with the [Remotive API](https://remotive.com/api/remote-jobs) to f
 
 ---
 
-🌐 [Live demo] (if you’ve deployed the app yet — e.g. Vercel, Netlify; if not, I’ll leave a placeholder)
+🌐 [Live Site URL](https://careers-steel.vercel.app/)
 
 ## ⚙️ Installation & Setup
 
@@ -92,7 +92,7 @@ Careers/
 
 📧 Email: ifunanyajudith09@gmail.com
 
-💼 [LinkedIn](linkedin.com/in/ifunanya-mmeremikwu)
+💼 LinkedIn: [ifunanya Mmeremikwu](https://www.linkedin.com/in/ifunanya-mmeremikwu/)
 
 🌟 GitHub: JudithJude369
 
