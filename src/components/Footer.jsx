@@ -1,13 +1,13 @@
 const Footer = () => {
   return (
-    <footer className=" text-gray-900 text-center p-4">
+    <footer className="text-gray-900 text-center p-4">
       <p>
         Copyright @JudithJude.dev All rights reserved | Job listings provided by
         <a
           href="https://remotive.com"
           target="_blank"
           rel="noopener noreferrer"
-          className=" cursor-pointer text-blue-700 hover:text-blue-500 font-semibold ml-2"
+          className="cursor-pointer text-blue-700 hover:text-blue-500 font-semibold ml-2"
         >
           Remotive
         </a>

@@ -3,13 +3,18 @@ import { Outlet } from "react-router-dom";
 
 const HomeLayout = () => {
   return (
-    <>
+    <div className="flex flex-col min-h-screen bg-gray-100">
+      {/* Navbar */}
       <Navbar />
-      <Outlet />
-      <section className="align-items bg-gray-100">
-        <Footer />
-      </section>
-    </>
+
+      {/* Main content fills available space */}
+      <main className="flex-grow">
+        <Outlet />
+      </main>
+
+      {/* Footer stays at bottom */}
+      <Footer />
+    </div>
   );
 };
 
