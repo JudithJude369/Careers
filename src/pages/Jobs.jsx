@@ -123,25 +123,20 @@ const Jobs = () => {
             {pageCount > 1 && (
               <div className="flex justify-center mt-10">
                 <ReactPaginate
-                  previousLabel={"← Previous"}
-                  nextLabel={"Next →"}
-                  breakLabel={"..."}
+                  previousLabel="← Prev"
+                  nextLabel="Next →"
+                  breakLabel="..."
                   pageCount={pageCount}
                   marginPagesDisplayed={1}
-                  pageRangeDisplayed={3}
+                  pageRangeDisplayed={2}
                   onPageChange={handlePageChange}
-                  containerClassName={"flex items-center space-x-2"}
-                  pageClassName={
-                    "px-3 py-1 border rounded cursor-pointer text-gray-700 hover:bg-gray-200"
-                  }
-                  activeClassName={"bg-gray-900 text-white"}
-                  previousClassName={
-                    "px-3 py-1 border rounded cursor-pointer text-gray-700 hover:bg-gray-200"
-                  }
-                  nextClassName={
-                    "px-3 py-1 border rounded cursor-pointer text-gray-700 hover:bg-gray-200"
-                  }
-                  disabledClassName={"opacity-50 cursor-not-allowed"}
+                  containerClassName="flex flex-wrap justify-center items-center gap-2 sm:gap-3"
+                  pageClassName="px-4 py-2 rounded-full border border-gray-300 bg-white text-gray-700 cursor-pointer hover:bg-blue-100 hover:text-blue-700 transition text-sm sm:text-base"
+                  activeClassName="bg-blue-600 text-white border-blue-600 hover:bg-blue-700"
+                  previousClassName="px-4 py-2 rounded-full border border-gray-300 bg-white text-gray-700 cursor-pointer hover:bg-blue-100 hover:text-blue-700 transition text-sm sm:text-base"
+                  nextClassName="px-4 py-2 rounded-full border border-gray-300 bg-white text-gray-700 cursor-pointer hover:bg-blue-100 hover:text-blue-700 transition text-sm sm:text-base"
+                  breakClassName="text-gray-500"
+                  disabledClassName="opacity-50 cursor-not-allowed"
                 />
               </div>
             )}
