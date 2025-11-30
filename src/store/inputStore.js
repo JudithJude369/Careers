@@ -1,21 +1,10 @@
-// 🟦 This store keeps the search input value (what user types)
-
-// import from zustand
 import { create } from "zustand";
-import { persist, devtools } from "zustand/middleware";
+import { devtools } from "zustand/middleware";
 
 export const useInputStore = create(
-  devtools(
-    persist(
-      (set) => ({
-        inputValue: "",
+  devtools((set) => ({
+    inputValue: "",
 
-        setInputValue: (newValue) => set({ inputValue: newValue }),
-      }),
-      {
-        name: "input-storage",
-        getStorage: () => sessionStorage, // 🟢 change to session storage
-      }
-    )
-  )
+    setInputValue: (newValue) => set({ inputValue: newValue }),
+  }))
 );

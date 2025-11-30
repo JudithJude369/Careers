@@ -26,7 +26,6 @@ const Jobs = () => {
     },
     enabled: !!term,
   });
-
   const handleBackHome = () => navigate("/");
   const handleViewDetails = (job) =>
     navigate(`/jobs/${job.id}`, { state: job });
